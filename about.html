@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Customize the styling for your navigation menu */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+        
+        /* Customize the styling for your content area */
+        .content {
+            padding: 50px;
+            background-color: #fff;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-height: 400px;
+            text-align: center;
+            font-size: 24px;
+        }
+        
+        /* Add styles for individual pages as needed */
+        .home {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        .about {
+            background-color: #eaeaea;
+            color: #333;
+        }
+        
+        .contact {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        /* Additional styles for the About page */
+        .about-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .about-text {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="content about">
+        <div class="about-content">
+            <h1 class="about-title">About Us</h1>
+            <p class="about-text">hello there i am vishal. i help samll business to grow to make digital presence.</p>
+            <p class="about-text">as you can reach us to grow with us.</p>
+        </div>
+    </div>
+    <script>
+        // Add animations for page transitions
+        const links = document.querySelectorAll('.navbar a');
+        const content = document.querySelector('.content');
+        
+        links.forEach(link => {
+            link.addEventListener('click', function(e) }
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                content.classList.remove('home', 'about', 'contact');
+                content.classList.add(target.substring(0, target.indexOf('.')));
+            });
+        });
+    </script>
+</body>
+</html>
